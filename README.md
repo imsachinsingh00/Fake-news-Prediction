@@ -1,24 +1,52 @@
-# Fake-news-Prediction
+# Fake News Prediction
 
-Develop a machine learning program to identify when an article might be fake news. Run by the UTK Machine Learning Club.
+This project implements a machine learning model to detect whether a news article is fake or real using natural language processing techniques.
 
+## 📁 Project Structure
 
+- `fake_news_prediction.ipynb`: Main notebook to clean, vectorize, train, and test the model.
+- `README.md`: Documentation file.
 
-train.csv: A full training dataset with the following attributes:
+## 📰 Dataset
 
-id: unique id for a news article
-title: the title of a news article
-author: author of the news article
-text: the text of the article; could be incomplete
-label: a label that marks the article as potentially unreliable
-1: unreliable
-0: reliable
-test.csv: A testing training dataset with all the same attributes at train.csv without the label.
+This project uses a dataset of real and fake news articles. You can download a suitable dataset from:
+- [Fake and real news dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)
 
-submit.csv: A sample submission that you can
+Dataset should include columns like `title`, `text`, and `label`.
 
+## ⚙️ Requirements
 
+- Python 3.x
+- pandas
+- numpy
+- sklearn
+- matplotlib
+- seaborn
 
-Download the train.csv file because the size of file is very large to upload on github
+Install with:
+```bash
+pip install -r requirements.txt
+```
 
-link :  https://www.kaggle.com/competitions/fake-news/data?select=train.csv
+## 🧠 Techniques Used
+
+- Text preprocessing
+- CountVectorizer and TF-IDF
+- Multinomial Naive Bayes classifier
+- Train/Test split
+- Evaluation metrics: accuracy, confusion matrix, classification report
+
+## 🚀 How to Run
+
+1. Download the dataset and place it in the project folder.
+2. Open `fake_news_prediction.ipynb` in Jupyter.
+3. Run all cells to train and evaluate the model.
+
+## 📈 Sample Output
+
+- Accuracy: ~95%
+- Real-time prediction on custom input possible after model training.
+
+## 📄 License
+
+MIT License.
